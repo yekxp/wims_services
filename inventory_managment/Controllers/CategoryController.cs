@@ -17,7 +17,7 @@ namespace inventory_managment.Controllers
             _categoryService = categoryService;
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpPost("/addCategory")]
         public IActionResult AddCategory([FromBody] Category category)
         {
@@ -26,7 +26,7 @@ namespace inventory_managment.Controllers
             return Ok(category);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Customer, Admin")]
         [HttpGet("/getAllCategories")]
         public async Task<ActionResult<IEnumerable<Category>>> GetAllCategorie()
         {
@@ -35,7 +35,7 @@ namespace inventory_managment.Controllers
             return Ok(result);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet("/getCategoryById/{id}")]
         public async Task<IActionResult> GetCategoryById(string id)
         {
@@ -44,7 +44,7 @@ namespace inventory_managment.Controllers
             return result is null ? NotFound() : Ok(result);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("/deleteCategory/{id}")]
         public async Task<IActionResult> DeleteCategory(string id)
         {

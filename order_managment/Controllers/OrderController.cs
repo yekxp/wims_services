@@ -21,6 +21,7 @@ namespace order_managment.Controllers
             _orderService = orderService;
         }
 
+        [Authorize(Roles = "Customer, Admin")]
         [HttpPost("/createOrder")]
         public async Task<ActionResult<Order>> CreateOrder([FromBody] Order order)
         {
@@ -34,7 +35,7 @@ namespace order_managment.Controllers
             return Ok(createdOrder);
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpPut("/updateStatusOrder/{id}/{status}")]
         public async Task<ActionResult<Order>> ChangeOrderStatus(string id, string status)
         {
@@ -43,7 +44,7 @@ namespace order_managment.Controllers
             return Ok(updatedOrder);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet("/getOrders")]
         public async Task<ActionResult<List<Order>>> GetOrders()
         {
@@ -52,7 +53,7 @@ namespace order_managment.Controllers
             return Ok(orders);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet("/getOrderById/{id}")]
         public async Task<ActionResult<Order>> GetOrder(string id)
         {
@@ -61,7 +62,7 @@ namespace order_managment.Controllers
             return Ok(order);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("/deleteOrder/{id}")]
         public async Task<ActionResult<Order>> DeleteOrder(string id)
         {
@@ -70,7 +71,7 @@ namespace order_managment.Controllers
             return Ok();
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet("/getOrderInfo")]
         public async Task<ActionResult<OrdersAnalytics>> GetOrderInfo()
         {
@@ -79,7 +80,7 @@ namespace order_managment.Controllers
             return Ok(order);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Customer, Admin")]
         [HttpPost("/filter")]
         public async Task<ActionResult<List<Order>>> Filter(OrderFilter filterPayload)
         {

@@ -18,7 +18,7 @@ namespace inventory_managment.Controllers
             _warehouseService = warehouseService;
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpPost("addWarehouse")]
         public async Task<IActionResult> AddWarehouse([FromBody] Warehouse warehouse)
         {
@@ -27,7 +27,7 @@ namespace inventory_managment.Controllers
             return Ok();
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet("getAllWarehouses")]
         public async Task<ActionResult<List<Warehouse>>> GetAllWarehouses()
         {
@@ -35,7 +35,7 @@ namespace inventory_managment.Controllers
             return Ok(warehouses);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpGet("getWarehouseById/{id}")]
         public async Task<ActionResult<Warehouse>> GetWarehouseById(string id)
         {
@@ -43,7 +43,7 @@ namespace inventory_managment.Controllers
             return Ok(warehouse);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Customer, Admin")]
         [HttpPost("filter")]
         public async Task<ActionResult<List<Product>>> GetWarehouseById([FromBody] FilterPayload filterPayload)
         {
@@ -51,7 +51,7 @@ namespace inventory_managment.Controllers
             return Ok(products);
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpPost("addProducts")]
         public async Task<IActionResult> AddProductsToWarehouse([FromBody] RequestProducts requestProducts)
         {
@@ -59,7 +59,7 @@ namespace inventory_managment.Controllers
             return Ok();
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpPut("updateProductInfo")]
         public async Task<IActionResult> UpdateProductInfo([FromBody] RequestProduct requestProduct)
         {
@@ -67,7 +67,7 @@ namespace inventory_managment.Controllers
             return Ok();
         }
 
-        [Authorize]
+        [Authorize(Roles = "Admin")]
         [HttpDelete("deleteProductFromWarehouse")]
         public async Task<IActionResult> DeleteProductFromWarehouse([FromBody] RequestProducts requestProducts)
         {

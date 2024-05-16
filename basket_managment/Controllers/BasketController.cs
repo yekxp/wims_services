@@ -1,5 +1,6 @@
 using basket_managment.Model;
 using basket_managment.Services;
+using JwtManagerHandler.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,7 +18,7 @@ namespace basket_managment.Controllers
             _basketService = basketService;
         }
 
-        [Authorize]
+        [Authorize(Roles = "Customer")]
         [HttpPost("/addToBasket")]
         public async Task<IActionResult> AddToBasket([FromBody] BasketInfo product)
         {
@@ -26,7 +27,7 @@ namespace basket_managment.Controllers
             return Ok();
         }
 
-        [Authorize]
+        [Authorize(Roles = "Customer")]
         [HttpDelete("/removeFromBasket/{productId}")]
         public async Task<IActionResult> RemoveFromBasket(string productId)
         {
@@ -35,7 +36,7 @@ namespace basket_managment.Controllers
             return currentCache == string.Empty ? NotFound() : Ok();
         }
 
-        [Authorize]
+        [Authorize(Roles = "Customer")]
         [HttpGet("/getBasket")]
         public async Task<ActionResult<BasketInfo>> GetBasket()
         {
