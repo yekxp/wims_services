@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "inventory_managment", "inventory_managment\inventory_managment.csproj", "{77029BF2-74CE-417A-B494-093883CA9E8C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "order_managment", "order_managment\order_managment.csproj", "{EC3FD639-E428-44A1-9414-8921193D9916}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "basket_managment", "basket_managment\basket_managment.csproj", "{72088E1B-FBD4-419D-9F70-1B2D554DAE42}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "user_managment", "user_managment\user_managment.csproj", "{4E9CA4E3-BDD0-4DFE-BF66-1BADF2C3440C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JwtManagerHandler", "JwtManagerHandler\JwtManagerHandler.csproj", "{E399C732-E0CB-40E5-A389-D1B45270082B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "analytical_management", "analytical_management\analytical_management.csproj", "{EC3B0D50-886F-43A2-AE7A-86C8B139621E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77029BF2-74CE-417A-B494-093883CA9E8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77029BF2-74CE-417A-B494-093883CA9E8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77029BF2-74CE-417A-B494-093883CA9E8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77029BF2-74CE-417A-B494-093883CA9E8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3FD639-E428-44A1-9414-8921193D9916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3FD639-E428-44A1-9414-8921193D9916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3FD639-E428-44A1-9414-8921193D9916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3FD639-E428-44A1-9414-8921193D9916}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72088E1B-FBD4-419D-9F70-1B2D554DAE42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72088E1B-FBD4-419D-9F70-1B2D554DAE42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72088E1B-FBD4-419D-9F70-1B2D554DAE42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72088E1B-FBD4-419D-9F70-1B2D554DAE42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E9CA4E3-BDD0-4DFE-BF66-1BADF2C3440C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E9CA4E3-BDD0-4DFE-BF66-1BADF2C3440C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E9CA4E3-BDD0-4DFE-BF66-1BADF2C3440C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E9CA4E3-BDD0-4DFE-BF66-1BADF2C3440C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E399C732-E0CB-40E5-A389-D1B45270082B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E399C732-E0CB-40E5-A389-D1B45270082B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E399C732-E0CB-40E5-A389-D1B45270082B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E399C732-E0CB-40E5-A389-D1B45270082B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC3B0D50-886F-43A2-AE7A-86C8B139621E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC3B0D50-886F-43A2-AE7A-86C8B139621E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC3B0D50-886F-43A2-AE7A-86C8B139621E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC3B0D50-886F-43A2-AE7A-86C8B139621E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B4168E4-A0DD-4761-817F-97B7D500F630}
+	EndGlobalSection
+EndGlobal
